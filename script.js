@@ -17,7 +17,9 @@ const getUpgrades = async () => {
 
 const renderUpgrades = async () => {
   const upgrades = await getUpgrades();
-  console.log(upgrades);
+  upgrades.forEach((upgrade, idx) => {
+    console.log(idx, upgrade.name);
+  });
 };
 
 renderUpgrades();
