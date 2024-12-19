@@ -10,7 +10,8 @@ const getUpgrades = async () => {
   const response = await fetch(
     'https://cookie-upgrade-api.vercel.app/api/upgrades'
   );
-  console.log(response);
+  const data = await response.json();
+  console.log(data);
 };
 
 getUpgrades();
