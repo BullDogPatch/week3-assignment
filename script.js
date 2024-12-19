@@ -12,6 +12,12 @@ const getUpgrades = async () => {
   );
   const data = await response.json();
   console.log(data);
+  return data;
 };
 
-getUpgrades();
+const renderUpgrades = async () => {
+  const upgrades = await getUpgrades();
+  console.log(upgrades);
+};
+
+renderUpgrades();
