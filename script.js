@@ -30,12 +30,12 @@ const renderUpgrades = async () => {
 
     const price = document.createElement('p');
     price.className = 'price';
-    price.textContent = upgrade.cost;
+    price.textContent = `$C ${upgrade.cost}`;
     li.appendChild(price);
 
     const increasedBy = document.createElement('p');
     increasedBy.className = 'increase';
-    increasedBy.textContent = upgrade.increase;
+    increasedBy.textContent = `+${upgrade.increase}`;
     li.appendChild(increasedBy);
 
     const buyButton = document.createElement('button');
