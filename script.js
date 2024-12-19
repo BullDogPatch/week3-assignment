@@ -1,1 +1,4 @@
-console.log('Hi mom!');
+const gameState = {
+  cookieCount: 0,
+  cookiesPerSecond: 0,
+};
