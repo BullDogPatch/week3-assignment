@@ -43,7 +43,9 @@ const renderUpgrades = async () => {
     buyButton.textContent = 'Buy';
     li.appendChild(buyButton);
     console.log(li);
+    ul.appendChild(li);
   });
+  console.log(ul);
 };
 
 renderUpgrades();
