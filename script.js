@@ -41,6 +41,7 @@ const renderUpgrades = async () => {
     const buyButton = document.createElement('button');
     buyButton.className = 'buy';
     buyButton.textContent = 'Buy';
+    buyButton.addEventListener('click', () => buyUpgradesHandler(upgrade.cost));
     li.appendChild(buyButton);
     console.log(li);
     ul.appendChild(li);
@@ -50,3 +51,7 @@ const renderUpgrades = async () => {
 };
 
 renderUpgrades();
+
+const buyUpgradesHandler = (value) => {
+  console.log(value);
+};
