@@ -17,8 +17,12 @@ const getUpgrades = async () => {
 
 const renderUpgrades = async () => {
   const upgrades = await getUpgrades();
+  const ul = document.createElement('ul');
   upgrades.forEach((upgrade, idx) => {
     console.log(idx, upgrade.name);
+    const li = document.createElement('li');
+    li.textContent = upgrade.name;
+    console.log(li);
   });
 };
 
