@@ -46,6 +46,7 @@ const renderUpgrades = async () => {
     ul.appendChild(li);
   });
   console.log(ul);
+  upgradesShopContainer.appendChild(ul);
 };
 
 renderUpgrades();
