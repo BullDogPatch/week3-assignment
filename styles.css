@@ -9,11 +9,18 @@
 body {
   text-align: center;
   font-family: 'Poppins', serif;
-}
-
-.dark {
   background-color: #121212;
   color: white;
+}
+
+/* .dark {
+  background-color: #121212;
+  color: white;
+} */
+
+.light {
+  color: black;
+  background-color: #f8fafc;
 }
 
 .navbar {
@@ -31,7 +38,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   font-size: 1em;
   /* margin: 10px; */
 }

@@ -13,6 +13,8 @@ const incrementCookies = document.querySelector('.cookie-incrementer');
 const notEnoughCookiesMessage = document.querySelector('.not-enough-cookies');
 const cps = document.querySelector('.cps');
 const resetButton = document.querySelector('.reset');
+const chooseTheme = document.querySelector('.choose-theme');
+console.log(chooseTheme);
 
 const updateCookieValuesOnScreen = () => {
   actualCookieValue.textContent = gameState.cookieCount;
@@ -105,4 +107,10 @@ resetButton.addEventListener('click', () => {
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
   localStorage.removeItem('game-data');
+});
+
+chooseTheme.addEventListener('click', () => {
+  const body = document.querySelector('body');
+  body.classList.toggle('light');
+  console.log(body);
 });
