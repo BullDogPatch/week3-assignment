@@ -58,7 +58,7 @@ renderUpgrades();
 const buyUpgradesHandler = (value) => {
   console.log(value);
   if (gameState.cookieCount >= value) {
-    console.log('You have enough cookies');
+    gameState.cookieCount -= value;
   } else {
     console.log('You dont NOT have enough cookies');
   }
