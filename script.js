@@ -74,7 +74,7 @@ const buyUpgradesHandler = (value) => {
 
     setTimeout(() => {
       notEnoughCookiesMessage.style.display = 'none';
-    }, 2000);
+    }, 1000);
     console.log('You dont NOT have enough cookies');
   }
 };
