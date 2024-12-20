@@ -49,14 +49,11 @@ const renderUpgrades = async () => {
 
   upgrades.forEach((upgrade) => {
     const li = document.createElement('li');
-    li.className = 'upgrade-item';
     const item = document.createElement('p');
-    item.className = 'item';
     item.textContent = upgrade.name;
     li.appendChild(item);
 
     const price = document.createElement('p');
-    price.className = 'price';
     price.textContent = `$C ${upgrade.cost}`;
     li.appendChild(price);
 
@@ -66,7 +63,6 @@ const renderUpgrades = async () => {
     li.appendChild(increasedBy);
 
     const buyButton = document.createElement('button');
-    buyButton.className = 'buy';
     buyButton.textContent = 'Buy';
     buyButton.addEventListener('click', () => buyUpgradesHandler(upgrade));
     li.appendChild(buyButton);
