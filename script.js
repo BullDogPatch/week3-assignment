@@ -1,5 +1,5 @@
 const gameState = {
-  cookieCount: 0,
+  cookieCount: 1000000,
   cookiesPerSecond: 0,
 };
 
