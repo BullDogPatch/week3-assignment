@@ -63,3 +63,8 @@ const buyUpgradesHandler = (value) => {
     console.log('You dont NOT have enough cookies');
   }
 };
+
+setInterval(() => {
+  gameState.cookieCount++;
+  actualCookieValue.textContent = gameState.cookieCount;
+}, 1000);
