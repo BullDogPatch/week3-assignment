@@ -6,18 +6,6 @@ Cookie clicker for week 3 assignment
 
 #TODOS
 
-#### Increment cookies
-
-#### Check value of cookies is enough to buy upgrades
-
-#### Add the amount of the cookies per second that the upgrade gives
-
-#### Add timer
-
-#### Add error to screen if user doesn't have enough cookies
-
-#### Add cookies per second to the screen
-
 #### Do reset button
 
 #### Add to local storage
@@ -25,3 +13,5 @@ Cookie clicker for week 3 assignment
 #### Do styles
 
 #### Then maybe some stretch goals
+
+#### Would like to figure out how to add how many times user bought an item like in Joe's cookie clicker game in his demo
