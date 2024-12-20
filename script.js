@@ -6,6 +6,7 @@ const gameState = {
 const upgradesShopContainer = document.querySelector('.upgrades-shop');
 const actualCookieValue = document.querySelector('.actual-cookies');
 const incrementCookies = document.querySelector('.cookie-incrementer');
+const notEnoughCookies = document.querySelector('.not-enough-cookies');
 
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
