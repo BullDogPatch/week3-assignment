@@ -3,6 +3,10 @@ const gameState = JSON.parse(localStorage.getItem('game-data')) || {
   cookiesPerSecond: 0,
 };
 
+const putInLocalStorage = () => {
+  localStorage.setItem('game-data', JSON.stringify(gameState));
+};
+
 const upgradesShopContainer = document.querySelector('.upgrades-shop');
 const actualCookieValue = document.querySelector('.actual-cookies');
 const incrementCookies = document.querySelector('.cookie-incrementer');
@@ -16,7 +20,7 @@ cps.textContent = gameState.cookiesPerSecond;
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
-  localStorage.setItem('game-data', JSON.stringify(gameState));
+  putInLocalStorage();
 });
 
 console.log(localStorage.getItem('game-data'));
@@ -74,7 +78,7 @@ const buyUpgradesHandler = (value) => {
     gameState.cookiesPerSecond += Number(value.increase);
     actualCookieValue.textContent = gameState.cookieCount;
     cps.textContent = gameState.cookiesPerSecond;
-    localStorage.setItem('game-data', JSON.stringify(gameState));
+    putInLocalStorage();
   } else {
     setTimeout(() => {
       notEnoughCookiesMessage.style.display = 'block';
@@ -91,7 +95,7 @@ setInterval(() => {
   gameState.cookieCount += gameState.cookiesPerSecond;
   actualCookieValue.textContent = gameState.cookieCount;
   cps.textContent = gameState.cookiesPerSecond;
-  localStorage.setItem('game-data', JSON.stringify(gameState));
+  putInLocalStorage();
 }, 1000);
 
 resetButton.addEventListener('click', () => {
