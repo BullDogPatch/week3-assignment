@@ -10,6 +10,8 @@ Cookie clicker for week 3 assignment
 
 #### Check value of cookies is enough to buy upgrades
 
+#### Add the amount of the cookies per second that the upgrade gives
+
 #### Add timer
 
 #### Add error to screen if user doesn't have enough cookies
