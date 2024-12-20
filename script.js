@@ -9,6 +9,7 @@ const incrementCookies = document.querySelector('.cookie-incrementer');
 
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
+  actualCookieValue.textContent = gameState.cookieCount;
 });
 
 const getUpgrades = async () => {
