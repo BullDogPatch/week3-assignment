@@ -99,4 +99,5 @@ resetButton.addEventListener('click', () => {
   gameState.cookiesPerSecond = 0;
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
+  localStorage.removeItem('game-data');
 });
