@@ -6,7 +6,7 @@ const gameState = {
 const upgradesShopContainer = document.querySelector('.upgrades-shop');
 const actualCookieValue = document.querySelector('.actual-cookies');
 const incrementCookies = document.querySelector('.cookie-incrementer');
-const notEnoughCookies = document.querySelector('.not-enough-cookies');
+const notEnoughCookiesMessage = document.querySelector('.not-enough-cookies');
 
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
@@ -65,6 +65,13 @@ const buyUpgradesHandler = (value) => {
   if (gameState.cookieCount >= value) {
     gameState.cookieCount -= value;
   } else {
+    setTimeout(() => {
+      notEnoughCookiesMessage.style.display = 'block';
+    }, 100);
+
+    setTimeout(() => {
+      notEnoughCookiesMessage.style.display = 'none';
+    }, 2000);
     console.log('You dont NOT have enough cookies');
   }
 };
