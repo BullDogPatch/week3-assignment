@@ -16,13 +16,24 @@ body {
   color: white;
 }
 
+.navbar {
+  margin: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar button {
+  cursor: pointer;
+}
+
 li {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  /* margin: 10px; */
 }
 
 li > p {
@@ -33,7 +44,6 @@ li > button {
   cursor: pointer;
   padding: 5px;
   background-color: lightgray;
-  /* color: wheat; */
   width: 80px;
   border-radius: 3px;
   border: 2px solid red;
@@ -47,6 +57,8 @@ li > button {
 .upgrades-shop {
   width: 70%;
   margin: 40px auto;
+  max-width: 600px;
+  align-items: center;
 }
 
 .reset {
