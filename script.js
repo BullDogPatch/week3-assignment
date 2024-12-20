@@ -98,7 +98,7 @@ const buyUpgradesHandler = (value) => {
   if (gameState.cookieCount >= value.cost) {
     gameState.cookieCount -= value.cost;
     console.log(value.increase);
-    gameState.cookieCount += Number(value.increase);
+    gameState.cookiesPerSecond += Number(value.increase);
     actualCookieValue.textContent = gameState.cookieCount;
   } else {
     setTimeout(() => {
@@ -113,6 +113,6 @@ const buyUpgradesHandler = (value) => {
 };
 
 setInterval(() => {
-  gameState.cookieCount++;
+  gameState.cookieCount += gameState.cookiesPerSecond;
   actualCookieValue.textContent = gameState.cookieCount;
 }, 1000);
