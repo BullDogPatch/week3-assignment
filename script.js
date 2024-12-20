@@ -5,7 +5,11 @@ const gameState = {
 
 const upgradesShopContainer = document.querySelector('.upgrades-shop');
 const actualCookieValue = document.querySelector('.actual-cookies');
-console.log(actualCookieValue);
+const incrementCookies = document.querySelector('.cookie-incrementer');
+
+incrementCookies.addEventListener('click', () => {
+  gameState.cookieCount++;
+});
 
 const getUpgrades = async () => {
   const response = await fetch(
