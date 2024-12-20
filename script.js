@@ -62,12 +62,11 @@ const renderUpgrades = async () => {
 renderUpgrades();
 
 const buyUpgradesHandler = (value) => {
-  console.log(value);
   if (gameState.cookieCount >= value.cost) {
     gameState.cookieCount -= value.cost;
-    console.log(value.increase);
-    gameState.co += Number(value.increase);
+    gameState.cookiesPerSecond += Number(value.increase);
     actualCookieValue.textContent = gameState.cookieCount;
+    cps.textContent = gameState.cookiesPerSecond;
   } else {
     setTimeout(() => {
       notEnoughCookiesMessage.style.display = 'block';
