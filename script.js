@@ -8,6 +8,7 @@ const actualCookieValue = document.querySelector('.actual-cookies');
 const incrementCookies = document.querySelector('.cookie-incrementer');
 const notEnoughCookiesMessage = document.querySelector('.not-enough-cookies');
 const cps = document.querySelector('.cps');
+const resetButton = document.querySelector('.reset');
 
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
@@ -85,3 +86,10 @@ setInterval(() => {
   actualCookieValue.textContent = gameState.cookieCount;
   cps.textContent = gameState.cookiesPerSecond;
 }, 1000);
+
+resetButton.addEventListener('click', () => {
+  gameState.cookieCount = 0;
+  gameState.cookieCount = 0;
+  actualCookieValue.textContent = 0;
+  cps.textContent = 0;
+});
