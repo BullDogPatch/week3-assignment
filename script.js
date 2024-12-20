@@ -4,7 +4,8 @@ const gameState = {
 };
 
 const upgradesShopContainer = document.querySelector('.upgrades-shop');
-console.log(upgradesShopContainer);
+const actualCookieValue = document.querySelector('.actual-cookies');
+console.log(actualCookieValue);
 
 const getUpgrades = async () => {
   const response = await fetch(
