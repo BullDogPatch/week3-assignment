@@ -12,6 +12,8 @@ Cookie clicker for week 3 assignment
 
 #### Add timer
 
+#### Do reset button
+
 #### Add to local storage
 
 #### Do styles

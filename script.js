@@ -17,7 +17,6 @@ const getUpgrades = async () => {
     'https://cookie-upgrade-api.vercel.app/api/upgrades'
   );
   const data = await response.json();
-  console.log(data);
   return data;
 };
 
@@ -49,10 +48,8 @@ const renderUpgrades = async () => {
     buyButton.textContent = 'Buy';
     buyButton.addEventListener('click', () => buyUpgradesHandler(upgrade.cost));
     li.appendChild(buyButton);
-    console.log(li);
     ul.appendChild(li);
   });
-  console.log(ul);
   upgradesShopContainer.appendChild(ul);
 };
 
@@ -60,4 +57,9 @@ renderUpgrades();
 
 const buyUpgradesHandler = (value) => {
   console.log(value);
+  if (gameState.cookieCount >= value) {
+    console.log('You have enough cookies');
+  } else {
+    console.log('You dont NOT have enough cookies');
+  }
 };
