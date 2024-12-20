@@ -14,6 +14,8 @@ Cookie clicker for week 3 assignment
 
 #### Add error to screen if user doesn't have enough cookies
 
+#### Add cookies per second to the screen
+
 #### Do reset button
 
 #### Add to local storage
