@@ -14,8 +14,11 @@ const notEnoughCookiesMessage = document.querySelector('.not-enough-cookies');
 const cps = document.querySelector('.cps');
 const resetButton = document.querySelector('.reset');
 
-actualCookieValue.textContent = gameState.cookieCount;
-cps.textContent = gameState.cookiesPerSecond;
+const updateCookieValuesOnScreen = () => {
+  actualCookieValue.textContent = gameState.cookieCount;
+  cps.textContent = gameState.cookiesPerSecond;
+};
+updateCookieValuesOnScreen();
 
 incrementCookies.addEventListener('click', () => {
   gameState.cookieCount++;
@@ -76,8 +79,7 @@ const buyUpgradesHandler = (value) => {
   if (gameState.cookieCount >= value.cost) {
     gameState.cookieCount -= value.cost;
     gameState.cookiesPerSecond += Number(value.increase);
-    actualCookieValue.textContent = gameState.cookieCount;
-    cps.textContent = gameState.cookiesPerSecond;
+    updateCookieValuesOnScreen();
     putInLocalStorage();
   } else {
     setTimeout(() => {
@@ -93,8 +95,7 @@ const buyUpgradesHandler = (value) => {
 setInterval(() => {
   gameState.cookieCount++;
   gameState.cookieCount += gameState.cookiesPerSecond;
-  actualCookieValue.textContent = gameState.cookieCount;
-  cps.textContent = gameState.cookiesPerSecond;
+  updateCookieValuesOnScreen();
   putInLocalStorage();
 }, 1000);
 
