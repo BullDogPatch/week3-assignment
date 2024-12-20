@@ -14,7 +14,6 @@ const notEnoughCookiesMessage = document.querySelector('.not-enough-cookies');
 const cps = document.querySelector('.cps');
 const resetButton = document.querySelector('.reset');
 const chooseTheme = document.querySelector('.choose-theme');
-console.log(chooseTheme);
 
 const updateCookieValuesOnScreen = () => {
   actualCookieValue.textContent = gameState.cookieCount;
@@ -27,8 +26,6 @@ incrementCookies.addEventListener('click', () => {
   actualCookieValue.textContent = gameState.cookieCount;
   putInLocalStorage();
 });
-
-console.log(localStorage.getItem('game-data'));
 
 const getUpgrades = async () => {
   try {
