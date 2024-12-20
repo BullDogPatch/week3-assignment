@@ -13,11 +13,15 @@ incrementCookies.addEventListener('click', () => {
 });
 
 const getUpgrades = async () => {
-  const response = await fetch(
-    'https://cookie-upgrade-api.vercel.app/api/upgrades'
-  );
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(
+      'https://cookie-upgrade-api.vercel.app/api/upgrades'
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Joe's API is borked");
+  }
 };
 
 const renderUpgrades = async () => {
