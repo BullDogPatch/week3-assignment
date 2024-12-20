@@ -109,8 +109,36 @@ resetButton.addEventListener('click', () => {
   localStorage.removeItem('game-data');
 });
 
-chooseTheme.addEventListener('click', () => {
-  const body = document.querySelector('body');
-  body.classList.toggle('light');
-  console.log(body);
+// TRYING TO GET DARK MODE IN STORAGE
+
+const body = document.querySelector('body');
+let darkMode = localStorage.getItem('dark-mode');
+
+const enableLightMode = () => {
+  body.classList.add('light');
+  localStorage.setItem('dark-mode', 'enabled');
+};
+
+const disableLightMode = () => {
+  body.classList.remove('light');
+  localStorage.setItem('dark-mode', 'disabled');
+};
+
+if (darkMode === 'enabled') {
+  enableLightMode(); // set state of darkMode on page load
+}
+
+chooseTheme.addEventListener('click', (e) => {
+  darkMode = localStorage.getItem('dark-mode'); // update darkMode when clicked
+  if (darkMode === 'disabled') {
+    enableLightMode();
+    chooseTheme.textContent = 'Dark Mode';
+  } else {
+    disableLightMode();
+    chooseTheme.textContent = 'Light Mode';
+  }
 });
+
+// LINKS for theme toggler (I had to fiddle around with the code to change it how I need it, isnt this what developers do)
+// https://javascript.plainenglish.io/build-a-dark-mode-toggle-with-javascript-and-localstorage-8022b492fb9e
+// https://codepen.io/coderjay06/pen/WNEPVBv
