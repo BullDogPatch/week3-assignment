@@ -19,6 +19,8 @@ body {
 li {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: space-around;
   margin: 10px;
 }
@@ -28,8 +30,14 @@ li > p {
 }
 
 li > button {
-  padding: 5px;
   cursor: pointer;
+  padding: 5px;
+  background-color: lightgray;
+  /* color: wheat; */
+  width: 80px;
+  border-radius: 3px;
+  border: 2px solid red;
+  font-weight: 600;
 }
 
 .hidden {
@@ -39,4 +47,19 @@ li > button {
 .upgrades-shop {
   width: 70%;
   margin: 40px auto;
+}
+
+.reset {
+  cursor: pointer;
+  padding: 5px;
+  background-color: lightgray;
+  width: 100px;
+  border-radius: 3px;
+  border: 2px solid red;
+  font-weight: 600;
+}
+
+.not-enough-cookies {
+  color: red;
+  font-weight: bold;
 }
