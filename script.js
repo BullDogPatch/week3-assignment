@@ -138,3 +138,10 @@ chooseTheme.addEventListener('click', (e) => {
 // LINKS for theme toggler (I had to fiddle around with the code to change it how I need it, isnt this what developers do)
 // https://javascript.plainenglish.io/build-a-dark-mode-toggle-with-javascript-and-localstorage-8022b492fb9e
 // https://codepen.io/coderjay06/pen/WNEPVBv
+
+/*
+ TODOS:
+  - Add media queries for smaller screens
+  - Try to add some visuals, like a +1 or how much the upgrades cost 
+  - Maybe add audio when cookie is clicked
+*/
