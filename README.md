@@ -6,10 +6,6 @@ Cookie clicker for week 3 assignment
 
 #TODOS
 
-#### Do reset button
-
-#### Add to local storage
-
 #### Do styles
 
 #### Then maybe some stretch goals
