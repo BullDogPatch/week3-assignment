@@ -33,6 +33,14 @@ body {
   cursor: pointer;
 }
 
+.cookie-incrementer {
+  margin: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* https://www.w3schools.com/howto/howto_css_disable_text_selection.asp */
+
 li {
   list-style: none;
   display: flex;
