@@ -78,6 +78,8 @@ const buyUpgradesHandler = (value) => {
     gameState.cookiesPerSecond += Number(value.increase);
     updateCookieValuesOnScreen();
     putInLocalStorage();
+    const audio = new Audio('click-sound/ka-ching.mp3');
+    audio.play();
   } else {
     setTimeout(() => {
       notEnoughCookiesMessage.style.display = 'block';
