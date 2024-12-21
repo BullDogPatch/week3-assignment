@@ -22,7 +22,7 @@ const updateCookieValuesOnScreen = () => {
 updateCookieValuesOnScreen();
 
 incrementCookies.addEventListener('click', () => {
-  const audio = new Audio('click-sound/click-sound.mp3');
+  const audio = new Audio('click-sound/pick-92276.mp3');
   audio.play();
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
