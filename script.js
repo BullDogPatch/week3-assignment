@@ -22,6 +22,8 @@ const updateCookieValuesOnScreen = () => {
 updateCookieValuesOnScreen();
 
 incrementCookies.addEventListener('click', () => {
+  const audio = new Audio('click-sound/click-sound.mp3');
+  audio.play();
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
   putInLocalStorage();
