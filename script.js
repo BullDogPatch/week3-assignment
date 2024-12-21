@@ -1,6 +1,6 @@
 const gameState = JSON.parse(localStorage.getItem('game-data')) || {
   cookieCount: 0,
-  cookiesPerSecond: 0,
+  cookiesPerSecond: 1,
 };
 
 const putInLocalStorage = () => {
@@ -103,7 +103,7 @@ resetButton.addEventListener('click', () => {
   audio.play();
   clearInterval(gameTimer);
   gameState.cookieCount = 0;
-  gameState.cookiesPerSecond = 0;
+  gameState.cookiesPerSecond = 1;
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
   // console.log(gameState);
