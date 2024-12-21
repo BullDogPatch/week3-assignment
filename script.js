@@ -91,7 +91,7 @@ const buyUpgradesHandler = (value) => {
   }
 };
 
-setInterval(() => {
+let gameTimer = setInterval(() => {
   gameState.cookieCount++;
   gameState.cookieCount += gameState.cookiesPerSecond;
   updateCookieValuesOnScreen();
@@ -101,12 +101,22 @@ setInterval(() => {
 resetButton.addEventListener('click', () => {
   const audio = new Audio('click-sound/epic.swf.mp3');
   audio.play();
+  clearInterval(gameTimer);
   gameState.cookieCount = 0;
   gameState.cookiesPerSecond = 0;
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
+  // console.log(gameState);
   localStorage.removeItem('game-data');
   putInLocalStorage();
+
+  // console.log(localStorage.getItem('game-data'));
+  gameTimer = setInterval(() => {
+    gameState.cookieCount++;
+    gameState.cookieCount += gameState.cookiesPerSecond;
+    updateCookieValuesOnScreen();
+    putInLocalStorage();
+  }, 1000);
 });
 
 // TRYING TO GET DARK MODE IN STORAGE
