@@ -99,11 +99,14 @@ setInterval(() => {
 }, 1000);
 
 resetButton.addEventListener('click', () => {
+  const audio = new Audio('click-sound/epic.swf.mp3');
+  audio.play();
   gameState.cookieCount = 0;
   gameState.cookiesPerSecond = 0;
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
   localStorage.removeItem('game-data');
+  putInLocalStorage();
 });
 
 // TRYING TO GET DARK MODE IN STORAGE
