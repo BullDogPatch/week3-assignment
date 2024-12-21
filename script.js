@@ -22,7 +22,7 @@ const updateCookieValuesOnScreen = () => {
 updateCookieValuesOnScreen();
 
 incrementCookies.addEventListener('click', () => {
-  const audio = new Audio('click-sound/pick-92276.mp3');
+  const audio = new Audio('click-sound/pop-1-35897.mp3');
   audio.play();
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
@@ -91,8 +91,14 @@ const buyUpgradesHandler = (value) => {
   }
 };
 
+// let gameTimer = setInterval(() => {
+//   gameState.cookieCount++;
+//   gameState.cookieCount += gameState.cookiesPerSecond;
+//   updateCookieValuesOnScreen();
+//   putInLocalStorage();
+// }, 1000);
+
 let gameTimer = setInterval(() => {
-  gameState.cookieCount++;
   gameState.cookieCount += gameState.cookiesPerSecond;
   updateCookieValuesOnScreen();
   putInLocalStorage();
@@ -106,13 +112,9 @@ resetButton.addEventListener('click', () => {
   gameState.cookiesPerSecond = 1;
   actualCookieValue.textContent = 0;
   cps.textContent = 0;
-  // console.log(gameState);
   localStorage.removeItem('game-data');
   putInLocalStorage();
-
-  // console.log(localStorage.getItem('game-data'));
   gameTimer = setInterval(() => {
-    gameState.cookieCount++;
     gameState.cookieCount += gameState.cookiesPerSecond;
     updateCookieValuesOnScreen();
     putInLocalStorage();
