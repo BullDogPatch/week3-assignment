@@ -157,7 +157,6 @@ chooseTheme.addEventListener('click', (e) => {
 
 /*
  TODOS:
-  - Add media queries for smaller screens
   - Try to add some visuals, like a +1 or how much the upgrades cost 
   - TRY FIGURE OUT HOW TO NOT KEEP PLAYING RICK ROLL OVER EACH OTHER IF RESET IS SPAMMED
 */
