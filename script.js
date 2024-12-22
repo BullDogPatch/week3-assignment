@@ -21,31 +21,6 @@ const updateCookieValuesOnScreen = () => {
 };
 updateCookieValuesOnScreen();
 
-// incrementCookies.addEventListener('click', () => {
-//   const audio = new Audio('click-sound/pop-1-35897.mp3');
-//   audio.play();
-//   gameState.cookieCount++;
-//   actualCookieValue.textContent = gameState.cookieCount;
-//   const moneyAnimation = document.createElement('p');
-//   moneyAnimation.innerHTML = '+1';
-//   const cookieElement = document.querySelector('.cookie-incrementer'); // The cookie SVG element
-//   document.body.appendChild(moneyAnimation);
-
-//   // Position the "+1" above the cookie
-//   const rect = cookieElement.getBoundingClientRect();
-//   moneyAnimation.style.position = 'absolute';
-//   moneyAnimation.style.left = `${rect.left + rect.width / 2 - 10}px`; // Center the "+1" above the cookie
-//   moneyAnimation.style.top = `${rect.top - 20}px`; // Position above the cookie
-//   moneyAnimation.classList.add('moneyAnimation');
-
-//   // Remove the element after animation
-//   setTimeout(() => {
-//     moneyAnimation.remove();
-//   }, 1000);
-
-//   putInLocalStorage();
-// });
-
 incrementCookies.addEventListener('click', (event) => {
   const audio = new Audio('click-sound/pop-1-35897.mp3');
   audio.play();
@@ -143,13 +118,6 @@ const buyUpgradesHandler = (value) => {
   }
 };
 
-// let gameTimer = setInterval(() => {
-//   gameState.cookieCount++;
-//   gameState.cookieCount += gameState.cookiesPerSecond;
-//   updateCookieValuesOnScreen();
-//   putInLocalStorage();
-// }, 1000);
-
 let gameTimer = setInterval(() => {
   gameState.cookieCount += gameState.cookiesPerSecond;
   updateCookieValuesOnScreen();
@@ -202,13 +170,3 @@ chooseTheme.addEventListener('click', (e) => {
     chooseTheme.textContent = 'Light Mode';
   }
 });
-
-// LINKS for theme toggler (I had to fiddle around with the code to change it how I need it, isnt this what developers do)
-// https://javascript.plainenglish.io/build-a-dark-mode-toggle-with-javascript-and-localstorage-8022b492fb9e
-// https://codepen.io/coderjay06/pen/WNEPVBv
-
-/*
- TODOS:
-  - Try to add some visuals, like a +1 or how much the upgrades cost 
-  - TRY FIGURE OUT HOW TO NOT KEEP PLAYING RICK ROLL OVER EACH OTHER IF RESET IS SPAMMED
-*/
