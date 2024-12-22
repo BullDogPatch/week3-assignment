@@ -140,3 +140,34 @@ li > button {
     height: 80px;
   }
 }
+
+/* this is not my work */
+/* https://stackoverflow.com/questions/69970533/create-a-1-animation-when-button-is-clicked, did get AI to translate this for me */
+.moneyAnimation {
+  position: absolute;
+  font-size: 24px;
+  color: #ffcc00; /* yellow or any color you prefer */
+  font-weight: bold;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.animateMoney {
+  animation: moneyMove 1s ease-out forwards;
+}
+
+@keyframes moneyMove {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-50px); /* Move up */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px); /* Move up further */
+  }
+}
