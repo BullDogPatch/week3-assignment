@@ -21,11 +21,38 @@ const updateCookieValuesOnScreen = () => {
 };
 updateCookieValuesOnScreen();
 
-incrementCookies.addEventListener('click', () => {
+incrementCookies.addEventListener('click', (event) => {
   const audio = new Audio('click-sound/pop-1-35897.mp3');
   audio.play();
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
+
+  // this is not my work
+  // https://stackoverflow.com/questions/69970533/create-a-1-animation-when-button-is-clicked, did get AI to translate this for me
+  // Create the +1 element
+  const moneyAnimation = document.createElement('p');
+  moneyAnimation.innerHTML = '+1';
+  moneyAnimation.classList.add('moneyAnimation');
+
+  // Append the animation element to the body or a container
+  document.body.appendChild(moneyAnimation);
+
+  // Get the position of the click relative to the cookie element
+  const clickX = event.clientX;
+  const clickY = event.clientY;
+
+  // Position the +1 element where the click occurred
+  moneyAnimation.style.left = `${clickX - moneyAnimation.offsetWidth / 2}px`; // Center the text on the click position
+  moneyAnimation.style.top = `${clickY - moneyAnimation.offsetHeight}px`; // Position it just above the click point
+
+  // Apply the animation for moving up
+  moneyAnimation.classList.add('animateMoney');
+
+  // Remove the element after the animation ends
+  moneyAnimation.addEventListener('animationend', () => {
+    moneyAnimation.remove();
+  });
+
   putInLocalStorage();
 });
 
@@ -91,13 +118,6 @@ const buyUpgradesHandler = (value) => {
   }
 };
 
-// let gameTimer = setInterval(() => {
-//   gameState.cookieCount++;
-//   gameState.cookieCount += gameState.cookiesPerSecond;
-//   updateCookieValuesOnScreen();
-//   putInLocalStorage();
-// }, 1000);
-
 let gameTimer = setInterval(() => {
   gameState.cookieCount += gameState.cookiesPerSecond;
   updateCookieValuesOnScreen();
@@ -150,13 +170,3 @@ chooseTheme.addEventListener('click', (e) => {
     chooseTheme.textContent = 'Light Mode';
   }
 });
-
-// LINKS for theme toggler (I had to fiddle around with the code to change it how I need it, isnt this what developers do)
-// https://javascript.plainenglish.io/build-a-dark-mode-toggle-with-javascript-and-localstorage-8022b492fb9e
-// https://codepen.io/coderjay06/pen/WNEPVBv
-
-/*
- TODOS:
-  - Try to add some visuals, like a +1 or how much the upgrades cost 
-  - TRY FIGURE OUT HOW TO NOT KEEP PLAYING RICK ROLL OVER EACH OTHER IF RESET IS SPAMMED
-*/
