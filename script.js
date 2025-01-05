@@ -27,7 +27,7 @@ incrementCookies.addEventListener('click', (event) => {
   gameState.cookieCount++;
   actualCookieValue.textContent = gameState.cookieCount;
 
-  // this is not my work
+  // this is not my work (line 33 - 54)
   // https://stackoverflow.com/questions/69970533/create-a-1-animation-when-button-is-clicked, did get AI to translate this for me
   // Create the +1 element
   const moneyAnimation = document.createElement('p');
